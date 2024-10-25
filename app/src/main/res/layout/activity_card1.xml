@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Card1Activity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#FFFFFF"
+        android:orientation="vertical"
+        android:padding="16dp"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="-35dp">
+
+
+        <FrameLayout style="@style/LessonHeaderStyle">
+
+            <ImageButton
+                style="@style/BackButtonStyle"
+                android:src="@drawable/strelka"
+                android:onClick="toMain"/>
+            <TextView
+                android:text="Формулы\nсокращенного\nумножения"
+                style="@style/LessonHeaderTextStyle" />
+        </FrameLayout>
+
+        <View
+            style="@style/StripStyle"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"/>
+
+        <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal"
+            android:columnCount="3"
+            android:useDefaultMargins="true">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_columnWeight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    style="@style/LessonNumStyle"
+                    android:text="Урок 1"/>
+
+                <androidx.appcompat.widget.AppCompatButton
+                    style="@style/LessonOKButtonStyle"
+                    android:onClick="toFSULesson1"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_columnWeight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    style="@style/LessonNumStyle"
+                    android:text="Урок 2" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    style="@style/LessonOKButtonStyle" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_columnWeight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    style="@style/LessonNumStyle"
+                    android:text="Урок 3" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    style="@style/LessonProgressButtonStyle"
+                    android:text="0%" />
+            </LinearLayout>
+
+        </GridLayout>
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

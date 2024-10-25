@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center_vertical"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:padding="16dp"
+    tools:context=".ProfileFragment">
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/edit_profile_pic"
+        android:backgroundTint="@color/colorProfile"
+        android:foregroundGravity="center"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="16dp"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/avatar"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginEnd="16dp"
+            android:background="@drawable/circle_background"
+            android:src="@drawable/baseline_person_24" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:fontFamily="@font/days_one"
+            android:text="Привет, Олег!"
+            android:textColor="@color/white"
+            android:textSize="20sp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="756dp"
+        android:orientation="vertical"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="-2dp"
+        tools:layout_editor_absoluteY="111dp">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/setting_but"
+            style="@style/ProfileButtonStyle"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/edit_profile_pic"
+            android:backgroundTint="@color/colorSetting"
+            android:drawableLeft="@drawable/baseline_person_24"
+            android:drawablePadding="24dp"
+            android:paddingLeft="10dp"
+            android:text="Настройки"
+            android:textAllCaps="false" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/rating_but"
+            style="@style/ProfileButtonStyle"
+            android:background="@drawable/edit_profile_pic"
+            android:backgroundTint="@color/colorRating"
+            android:drawableLeft="@drawable/baseline_person_24"
+            android:paddingLeft="10dp"
+            android:text="Рейтинг"
+            android:textAllCaps="false"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/mentor_but"
+            style="@style/ProfileButtonStyle"
+            android:background="@drawable/edit_profile_pic"
+            android:backgroundTint="@color/colorMentor"
+            android:drawableLeft="@drawable/baseline_person_24"
+            android:paddingLeft="10dp"
+            android:text="Наставник"
+            android:textAllCaps="false"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/certificate_but"
+            style="@style/ProfileButtonStyle"
+            android:background="@drawable/edit_profile_pic"
+            android:backgroundTint="@color/colorCertificate"
+            android:drawableLeft="@drawable/baseline_person_24"
+            android:paddingLeft="10dp"
+            android:text="Сертификация"
+            android:textAllCaps="false"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/subscription_but"
+            style="@style/ProfileButtonStyle"
+            android:background="@drawable/edit_profile_pic"
+            android:backgroundTint="@color/colorSubscription"
+            android:drawableLeft="@drawable/baseline_person_24"
+            android:paddingLeft="10dp"
+            android:text="Подписка"
+            android:textAllCaps="false"/>
+
+    </LinearLayout>
+
+</LinearLayout>

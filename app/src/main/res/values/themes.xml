@@ -1,0 +1,141 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.Skill21" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Customize your light theme here. -->
+        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+        <item name="android:buttonStyleToggle">@style/StarButton</item>
+    </style>
+
+    <style name="TextViewStyle">
+        <item name="android:fontFamily">@font/days_one</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="ButtonStyle" parent="Widget.AppCompat.Button">
+        <item name="android:background">@drawable/edit_button_border</item>
+        <item name="fontFamily">@font/days_one</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="CourseCard">
+        <item name="cardCornerRadius">12dp</item>
+        <item name="cardBackgroundColor">#F5F5F5</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="PicInCourseCard">
+        <item name="android:layout_marginLeft">15dp</item>
+        <item name="android:layout_marginTop">10dp</item>
+        <item name="android:layout_marginBottom">10dp</item>
+        <item name="android:background">@drawable/edit_pic_in_card_border</item>
+        <item name="android:layout_height">100dp</item>
+        <item name="android:layout_width">100dp</item>
+    </style>
+
+    <style name="ProgressBar" parent="Widget.AppCompat.ProgressBar.Horizontal">
+        <item name="background">@color/corall</item>
+        <item name="android:layout_height">10dp</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_gravity">center_vertical</item>
+    </style>
+
+    <style name="StarButton" parent="android:Widget.Button.Toggle">
+        <item name="android:background">@drawable/star_button_bg</item>
+        <item name="android:textOn">""</item>
+        <item name="android:textOff">""</item>
+        <item name="android:disabledAlpha">?android:attr/disabledAlpha</item>
+    </style>
+
+    <style name="ProfileButtonStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">90dp</item>
+        <item name="fontFamily">@font/days_one</item>
+        <item name="android:textAlignment">textStart</item>
+        <item name="android:textColor">@color/colorText</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:layout_marginTop">9dp</item>
+        <item name="android:drawablePadding">24dp</item>
+    </style>
+
+    <style name="LessonHeaderStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginBottom">10dp</item>
+        <item name="android:layout_marginLeft">12dp</item>
+        <item name="android:layout_marginRight">12dp</item>
+        <item name="android:gravity">center_vertical</item>
+    </style>
+
+    <style name="BackButtonStyle">
+        <item name="android:layout_width">50dp</item>
+        <item name="android:layout_height">50dp</item>
+        <item name="android:layout_gravity">center_vertical</item>
+        <item name="android:layout_marginEnd">16dp</item>
+        <item name="android:backgroundTint">#FFFFFF</item>
+    </style>
+
+    <style name="LessonHeaderTextStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="fontFamily">@font/days_one</item>
+        <item name="android:textAlignment">viewEnd</item>
+        <item name="android:textColor">@color/colorText</item>
+        <item name="android:textSize">24sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:lineSpacingExtra">-5dp</item>
+    </style>
+
+    <style name="StripStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">1dp</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:layout_marginTop">15dp</item>
+        <item name="android:layout_marginBottom">1dp</item>
+        <item name="android:background">@color/colorTextLesson</item>
+    </style>
+
+    <style name="LessonNumStyle">
+        <item name="android:textStyle">bold</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@color/colorTextLesson</item>
+        <item name="android:textSize">18sp</item>
+    </style>
+
+    <style name="LessonButStyle">
+        <item name="android:layout_width">94dp</item>
+        <item name="android:layout_height">70dp</item>
+        <item name="android:padding">12dp</item>
+        <item name="android:layout_marginTop">9dp</item>
+        <item name="android:textSize">16sp</item>
+        <item name="fontFamily">@font/days_one</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textAlignment">center</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:gravity">center_vertical</item>
+    </style>
+    <style name="LessonOKButtonStyle" parent="LessonButStyle">
+        <item name="android:background">@drawable/lesson_ok</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:text">100%</item>
+    </style>
+    <style name="LessonProgressButtonStyle" parent="LessonButStyle">
+        <item name="android:background">@drawable/lesson_progress</item>
+        <item name="android:textColor">@color/colorAccent</item>
+    </style>
+
+    <style name="ClassNumStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">-15dp</item>
+        <item name="android:layout_marginLeft">12dp</item>
+        <item name="android:layout_marginRight">12dp</item>
+        <item name="fontFamily">@font/days_one</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/colorTextLesson</item></style>
+
+    <style name="Theme.Skill21" parent="Base.Theme.Skill21" />
+</resources>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="corall">#FF5B8B</color>
+
+    <color name="colorAccent">#FF2C6B</color>
+    <color name="colorButton">#ffb4ec</color>
+    <color name="colorBackground">#FFFFFF</color>
+    <color name="colorText">#FF000000</color>
+    <color name="colorHint">#999999</color>
+
+    <color name="colorTabInactive">#999999</color>
+    <color name="colorProgress">#CCCCCC</color>
+    <color name="BackGrey">#F5F5F5</color>
+    <color name="BackPink">#FFE6ED</color>
+    <color name="colorSetting">#ffa7c1</color>
+    <color name="colorRating">#ffbed1</color>
+    <color name="colorMentor">#ffd6e2</color>
+    <color name="colorCertificate">#fee7ee</color>
+    <color name="colorSubscription">#FFEDF2</color>
+    <color name="colorTextLesson">#454444</color>
+    <color name="colorLessonBut">#D9D9D9</color>
+    <color name="colorProfile">#2c2c2c</color>
+</resources>
