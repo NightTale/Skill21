@@ -135,7 +135,18 @@
         <item name="android:layout_marginRight">12dp</item>
         <item name="fontFamily">@font/days_one</item>
         <item name="android:textSize">16sp</item>
-        <item name="android:textColor">@color/colorTextLesson</item></style>
+        <item name="android:textColor">@color/colorTextLesson</item>
+    </style>
+
+    <style name="ClassBottomStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginLeft">12dp</item>
+        <item name="android:layout_marginRight">12dp</item>
+        <item name="fontFamily">@font/days_one</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/colorTextLesson</item>
+    </style>
 
     <style name="Theme.Skill21" parent="Base.Theme.Skill21" />
 </resources>
