@@ -25,9 +25,9 @@ public class VhodActivity extends AppCompatActivity {
             return insets;
         });
     }
-    public void toMain(View v) {
+    public void toHome(View v) {
         Intent intent;
-        intent = new Intent(this, MainActivity.class);
+        intent = new Intent(this, HomeActivity.class);
         startActivity(intent);
     }
 }

@@ -183,7 +183,7 @@
                 style="@style/ButtonStyle"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:onClick="toMain"
+                android:onClick="toHome"
                 android:text="Войти" />
         </FrameLayout>
 

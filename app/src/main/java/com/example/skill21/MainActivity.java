@@ -24,6 +24,10 @@ public class MainActivity extends AppCompatActivity {
         getWindow().getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_HIDE_NAVIGATION
                 | View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY
         );
+        Intent intent;
+        intent = new Intent(this, VhodActivity.class);
+        startActivity(intent);
+        finish();
         super.onCreate(savedInstanceState);
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
@@ -63,5 +67,4 @@ public class MainActivity extends AppCompatActivity {
         intent = new Intent(MainActivity.this, Card1Activity.class);
         startActivity(intent);
     }
-
 }
