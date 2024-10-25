@@ -124,7 +124,7 @@
             android:layout_marginTop="50dp">
 
             <EditText
-                android:id="@+id/editTextText"
+                android:id="@+id/Login"
                 style="@style/TextViewStyle"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
@@ -160,7 +160,7 @@
             android:layout_marginTop="150dp">
 
             <EditText
-                android:id="@+id/editTextText1"
+                android:id="@+id/Password"
                 style="@style/TextViewStyle"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
@@ -204,6 +204,9 @@
 
             <TextView
                 style="@style/TextViewStyle"
+                android:focusable="true"
+                android:clickable="true"
+                android:onClick="toReg"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="right"

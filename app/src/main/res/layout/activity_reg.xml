@@ -247,6 +247,9 @@
 
             <TextView
                 style="@style/TextViewStyle"
+                android:clickable="true"
+                android:focusable="true"
+                android:onClick="toVhod"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="200dp"

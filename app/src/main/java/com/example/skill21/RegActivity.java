@@ -1,5 +1,6 @@
 package com.example.skill21;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
@@ -23,5 +24,11 @@ public class RegActivity extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
+    }
+    public void toVhod(View v) {
+        Intent intent;
+        intent = new Intent(this, VhodActivity.class);
+        startActivity(intent);
+        finish();
     }
 }
