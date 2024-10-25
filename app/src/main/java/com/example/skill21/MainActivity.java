@@ -21,9 +21,12 @@ public class MainActivity extends AppCompatActivity {
     ActivityMainBinding binding;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
         getWindow().getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_HIDE_NAVIGATION
                 | View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY
         );
+        EdgeToEdge.enable(this);
+
         super.onCreate(savedInstanceState);
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
@@ -42,8 +45,6 @@ public class MainActivity extends AppCompatActivity {
 
             return true;
         });
-
-        EdgeToEdge.enable(this);
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
