@@ -200,7 +200,7 @@
                 android:layout_height="wrap_content"
                 android:text="Нет аккаунта?"
                 android:textColor="@color/black"
-                android:textSize="12sp" />
+                android:textSize="11sp" />
 
             <TextView
                 style="@style/TextViewStyle"
@@ -209,7 +209,7 @@
                 android:layout_gravity="right"
                 android:text="Зарегистрироваться"
                 android:textColor="@color/black"
-                android:textSize="12sp" />
+                android:textSize="11sp" />
 
         </FrameLayout>
 
