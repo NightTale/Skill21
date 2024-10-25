@@ -10,6 +10,8 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
+import com.example.skill21.databinding.ActivityMainBinding;
+
 public class Card1Activity extends AppCompatActivity {
 
     @Override
@@ -17,8 +19,9 @@ public class Card1Activity extends AppCompatActivity {
         getWindow().getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_HIDE_NAVIGATION
                 | View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY
         );
-        super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
+
+        super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_card1);
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
