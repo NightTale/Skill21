@@ -35,50 +35,83 @@
 
         <View style="@style/StripStyle" />
 
-        <FrameLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginLeft="20dp"
-            android:layout_marginTop="26dp"
-            android:layout_marginRight="20dp"
-            android:background="@drawable/edit_profile_pic"
-            android:backgroundTint="@color/BackGrey"
-            android:orientation="vertical">
+        <ScrollView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:scrollbars="none"
+            android:layout_weight="1">
 
-            <FrameLayout
+            <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="match_parent"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="26dp"
+                android:layout_marginRight="20dp"
+                android:background="@drawable/edit_profile_pic"
+                android:backgroundTint="@color/BackGrey"
+                android:orientation="vertical">
 
-                <androidx.appcompat.widget.AppCompatButton
-                    android:layout_width="105dp"
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:layout_width="105dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="right"
+                        android:layout_marginTop="12dp"
+                        android:layout_marginRight="12dp"
+                        android:layout_marginBottom="12dp"
+                        android:background="@drawable/edit_button_border"
+                        android:fontFamily="@font/days_one"
+                        android:text="Тест"
+                        android:textAlignment="center"
+                        android:textColor="@color/white"
+                        android:textSize="19sp"
+                        android:onClick="toFSUTest"/>
+                </FrameLayout>
+
+                <TextView
+                    android:id="@+id/textfsu1"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="right"
-                    android:layout_marginTop="12dp"
-                    android:layout_marginRight="12dp"
-                    android:layout_marginBottom="12dp"
-                    android:background="@drawable/edit_button_border"
-                    android:fontFamily="@font/days_one"
-                    android:text="Тесты"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="80dp"
+                    android:layout_marginRight="15dp"
+                    android:fontFamily="@font/poppins"
+                    android:justificationMode="inter_word"
+                    android:text=" Формулы сокращённого умножения — это готовые формулы, по которым можно представить некоторые выражения в виде произведения и наоборот — некоторыеФормулы сокращённого умножения — это готовые формулы, по которым можно представить некоторые выражения в виде произведения и наоборот — некоторыеФормулы сокращённого умножения — это готовые формулы, по которым можно представить некоторые выражения в виде произведения и наоборот — некоторыеФормулы сокращённого умножения — это готовые формулы, по которым можно представить некоторые выражения в виде произведения и наоборот — некоторыеФормулы сокращённого умножения — это готовые формулы, по которым можно представить некоторые выражения в виде произведения и наоборот — некоторые произведения в виде выражения, не раскрывая скобки и не приводя подобные слагаемые."
                     android:textAlignment="center"
-                    android:textColor="@color/white"
-                    android:textSize="19sp" />
-            </FrameLayout>
+                    android:textColor="@color/colorTextLesson"
+                    android:textSize="20dp" />
+                <RelativeLayout
+                    android:layout_marginBottom="20dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/textfsu1">
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="80dp"
-                android:layout_marginRight="15dp"
-                android:layout_marginLeft="15dp"
-                android:fontFamily="@font/poppins"
-                android:text=" Формулы сокращённого умножения — это готовые формулы, по которым можно представить некоторые выражения в виде произведения и наоборот — некоторые произведения в виде выражения, не раскрывая скобки и не приводя подобные слагаемые."
-                android:textAlignment="center"
-                android:justificationMode="inter_word"
-                android:textColor="@color/colorTextLesson"
-                android:textSize="20dp" />
-
-        </FrameLayout>
+                        <androidx.appcompat.widget.AppCompatButton
+                            android:layout_width="105dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="right"
+                            android:layout_marginTop="12dp"
+                            android:layout_marginRight="12dp"
+                            android:layout_marginBottom="12dp"
+                            android:background="@drawable/edit_button_border"
+                            android:fontFamily="@font/days_one"
+                            android:text="Тест"
+                            android:textAlignment="center"
+                            android:textColor="@color/white"
+                            android:textSize="19sp"
+                            android:onClick="toFSUTest"/>
+                    </FrameLayout>
+                </RelativeLayout>
+            </RelativeLayout>
+        </ScrollView>
     </LinearLayout>
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>
