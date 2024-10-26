@@ -52,11 +52,12 @@
                 android:textStyle="bold" />
         </RelativeLayout>
 
-        <RelativeLayout
+        <LinearLayout
             android:id="@+id/card1"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:layout_below="@+id/text_below_poisk"
+            android:orientation="vertical"
             android:padding="20dp">
 
             <androidx.cardview.widget.CardView
@@ -109,6 +110,7 @@
                         android:layout_gravity="center_vertical">
 
                         <TextView
+                            android:id="@+id/textfsu"
                             style="@style/TextViewStyle"
                             android:layout_width="170dp"
                             android:layout_height="wrap_content"
@@ -123,6 +125,7 @@
                         android:layout_gravity="right">
 
                         <ToggleButton
+                            android:id="@+id/star_button_fsu"
                             style="@style/StarButton"
                             android:layout_width="36dp"
                             android:layout_height="36dp"
@@ -130,6 +133,6 @@
                     </FrameLayout>
                 </FrameLayout>
             </androidx.cardview.widget.CardView>
-        </RelativeLayout>
+        </LinearLayout>
     </RelativeLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

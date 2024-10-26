@@ -1,15 +1,22 @@
 package com.example.skill21;
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 
 import androidx.cardview.widget.CardView;
 import androidx.fragment.app.Fragment;
 
+import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
+import android.widget.TextView;
+import android.widget.ToggleButton;
+
+import org.w3c.dom.Text;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -57,11 +64,31 @@ public class MyCoursesFragment extends Fragment {
             mParam2 = getArguments().getString(ARG_PARAM2);
         }
     }
-
+    public static LinearLayout addedview;
+    public static ToggleButton star_btn_1;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
+        final LayoutInflater factory = getLayoutInflater();
+        final View textEntryView = factory.inflate(R.layout.fragment_all_courses, null);
+        addedview = textEntryView.findViewById(R.id.card1);
+        star_btn_1 = textEntryView.findViewById(R.id.star_button_fsu);
         return inflater.inflate(R.layout.fragment_my_courses, container, false);
+    }
+
+    @Override
+    public void onViewCreated(View view, Bundle savedInstanceState) {
+        LinearLayout parentView = (LinearLayout) getView().findViewById(R.id.list_of_my_cources);
+        LinearLayout newview = addedview;
+        ((ViewGroup)newview.getParent()).removeView(newview);
+        LinearLayout.LayoutParams layoutParams = new LinearLayout.LayoutParams(
+                LinearLayout.LayoutParams.WRAP_CONTENT,
+                LinearLayout.LayoutParams.MATCH_PARENT
+        );
+        newview.setLayoutParams(layoutParams);
+        parentView.addView(newview);
+        boolean myValue = MainActivity.myBundle.getBoolean("id_User");
+        if (myValue) newview.setVisibility(View.VISIBLE);
+        else newview.setVisibility(View.INVISIBLE);
     }
 }

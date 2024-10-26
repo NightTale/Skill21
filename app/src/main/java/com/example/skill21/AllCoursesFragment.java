@@ -1,7 +1,9 @@
 package com.example.skill21;
 
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -11,6 +13,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.RelativeLayout;
+import android.widget.TextView;
+import android.widget.ToggleButton;
 
 public class AllCoursesFragment extends Fragment {
 
@@ -38,6 +42,7 @@ public class AllCoursesFragment extends Fragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         if (getArguments() != null) {
             mParam1 = getArguments().getString(ARG_PARAM1);
             mParam2 = getArguments().getString(ARG_PARAM2);
@@ -49,5 +54,30 @@ public class AllCoursesFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_all_courses, container, false);
+    }
+    @Override
+    public void onViewCreated(View view, Bundle savedInstanceState) {
+        ToggleButton toggleButton = getView().findViewById(R.id.star_button_fsu);
+        SharedPreferences sharedPreferences = getActivity().getSharedPreferences("save", Context.MODE_PRIVATE);
+        toggleButton.setChecked(sharedPreferences.getBoolean("value",false));
+        toggleButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (toggleButton.isChecked()) {
+                    SharedPreferences.Editor editor=getActivity().getSharedPreferences("save",Context.MODE_PRIVATE).edit();
+                    editor.putBoolean("value", true);
+                    editor.apply();
+                    toggleButton.setChecked(true);
+                    MainActivity.myBundle.putBoolean("id_User", true);
+                }
+                else {
+                    SharedPreferences.Editor editor=getActivity().getSharedPreferences("save",Context.MODE_PRIVATE).edit();
+                    editor.putBoolean("value",false);
+                    editor.apply();
+                    toggleButton.setChecked(false);
+                    MainActivity.myBundle.putBoolean("id_User", false);
+                }
+            }
+        });
     }
 }
