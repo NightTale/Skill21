@@ -109,6 +109,7 @@
                         android:layout_gravity="center_vertical">
 
                         <TextView
+                            android:id="@+id/textfsu"
                             style="@style/TextViewStyle"
                             android:layout_width="170dp"
                             android:layout_height="wrap_content"
@@ -123,6 +124,7 @@
                         android:layout_gravity="right">
 
                         <ToggleButton
+                            android:id="@+id/star_button_fsu"
                             style="@style/StarButton"
                             android:layout_width="36dp"
                             android:layout_height="36dp"
