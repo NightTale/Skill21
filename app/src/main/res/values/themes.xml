@@ -146,5 +146,26 @@
         <item name="android:textColor">@color/colorTextLesson</item>
     </style>
 
+    <style name="ResultTrueStyle">
+        <item name="android:layout_height">60dp</item>
+        <item name="android:background">@drawable/result_ok_background</item>
+        <item name="android:layout_marginBottom">15dp</item>
+        <item name="android:gravity">center</item>
+        <item name="fontFamily">@font/days_one</item>
+        <item name="android:textSize">18sp</item>
+
+    </style>
+    <style name="ResultFalseStyle">
+        <item name="android:layout_height">60dp</item>
+        <item name="android:layout_marginBottom">15dp</item>
+        <item name="android:background">@drawable/edit_text_border</item>
+        <item name="android:backgroundTint">@color/colorTestFalse</item>
+        <item name="android:gravity">center</item>
+        <item name="fontFamily">@font/days_one</item>
+        <item name="android:textSize">18sp</item>
+    </style>
+
+
+
     <style name="Theme.Skill21" parent="Base.Theme.Skill21" />
 </resources>
