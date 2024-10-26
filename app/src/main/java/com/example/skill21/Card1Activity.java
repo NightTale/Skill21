@@ -29,9 +29,9 @@ public class Card1Activity extends AppCompatActivity {
             return insets;
         });
     }
-    public void toMain(View v) {
+    public void toHome(View v) {
         Intent intent;
-        intent = new Intent(this, MainActivity.class);
+        intent = new Intent(this, HomeActivity.class);
         startActivity(intent);
     }
     public void toFSULesson1(View v) {

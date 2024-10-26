@@ -22,7 +22,7 @@
             <ImageButton
                 style="@style/BackButtonStyle"
                 android:src="@drawable/strelka"
-                android:onClick="toMain"/>
+                android:onClick="toHome"/>
             <TextView
                 android:text="Формулы\nсокращенного\nумножения"
                 style="@style/LessonHeaderTextStyle" />

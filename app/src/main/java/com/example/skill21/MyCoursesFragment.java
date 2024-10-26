@@ -82,7 +82,7 @@ public class MyCoursesFragment extends Fragment {
         LinearLayout newview = addedview;
         ((ViewGroup)newview.getParent()).removeView(newview);
         LinearLayout.LayoutParams layoutParams = new LinearLayout.LayoutParams(
-                LinearLayout.LayoutParams.WRAP_CONTENT,
+                LinearLayout.LayoutParams.MATCH_PARENT,
                 LinearLayout.LayoutParams.MATCH_PARENT
         );
         newview.setLayoutParams(layoutParams);
