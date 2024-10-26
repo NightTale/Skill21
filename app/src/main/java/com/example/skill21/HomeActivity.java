@@ -3,10 +3,7 @@ package com.example.skill21;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.CompoundButton;
 import android.widget.RelativeLayout;
-import android.widget.TextView;
-import android.widget.ToggleButton;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -19,27 +16,17 @@ import androidx.fragment.app.FragmentTransaction;
 
 import com.example.skill21.databinding.ActivityMainBinding;
 
-public class MainActivity extends AppCompatActivity {
+public class HomeActivity extends AppCompatActivity {
 
     ActivityMainBinding binding;
-    public static Bundle myBundle = new Bundle();
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-
         getWindow().getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_HIDE_NAVIGATION
                 | View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY
         );
-        Intent intent;
-        intent = new Intent(this, VhodActivity.class);
-        startActivity(intent);
-        finish();
-        EdgeToEdge.enable(this);
-
         super.onCreate(savedInstanceState);
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
-
         replaceFragment(new AllCoursesFragment());
 
         binding.bottomNavigationView.setOnItemSelectedListener(item -> {
@@ -56,6 +43,8 @@ public class MainActivity extends AppCompatActivity {
             return true;
         });
 
+        EdgeToEdge.enable(this);
+
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
@@ -71,7 +60,7 @@ public class MainActivity extends AppCompatActivity {
     }
     public void toCard1(View v) {
         Intent intent;
-        intent = new Intent(MainActivity.this, Card1Activity.class);
+        intent = new Intent(HomeActivity.this, Card1Activity.class);
         startActivity(intent);
     }
 }
