@@ -1,36 +1,21 @@
 package com.example.skill21.utils;
 
+import android.content.Context;
+import android.content.res.AssetManager;
+
 import java.io.FileInputStream;
 import java.io.IOException;
+import java.io.InputStream;
 import java.util.Properties;
 
 public class PropertiesUtil {
-    private static final Properties PROPERTIES = new Properties();
+    public static String getProperty(String key, Context context) throws IOException {
 
-    static
-    {
-        loadProperties();
+        Properties properties = new Properties();;
+        AssetManager assetManager = context.getAssets();
+        InputStream inputStream = assetManager.open("app.properties");
+        properties.load(inputStream);
+        return properties.getProperty(key);
     }
-    private PropertiesUtil()
-    {
-
-    }
-    public static String get(String key)
-    {
-        return PROPERTIES.getProperty(key);
-    }
-    private static void loadProperties()
-    {
-        try (FileInputStream fis = new FileInputStream("res/application.properties"))
-        {
-            PROPERTIES.load(fis);
-        }
-        catch (IOException ex)
-        {
-            throw new RuntimeException(ex);
-        }
-    }
-
-
 
 }

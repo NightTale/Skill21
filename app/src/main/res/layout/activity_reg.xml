@@ -72,8 +72,8 @@
                 android:layout_marginRight="20dp">
 
                 <EditText
-                    android:id="@+id/editTextText"
                     style="@style/TextViewStyle"
+                    android:id="@+id/user_reg"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:background="@drawable/edit_text_border"
@@ -112,8 +112,8 @@
                 android:layout_marginRight="20dp">
 
                 <EditText
-                    android:id="@+id/editTextText1"
                     style="@style/TextViewStyle"
+                    android:id="@+id/email_reg"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:background="@drawable/edit_text_border"
@@ -153,6 +153,7 @@
 
                 <EditText
                     style="@style/TextViewStyle"
+                    android:id="@+id/password_reg"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:background="@drawable/edit_text_border"
@@ -192,6 +193,7 @@
 
                 <EditText
                     style="@style/TextViewStyle"
+                    android:id="@+id/password_reg2"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:background="@drawable/edit_text_border"
@@ -217,6 +219,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:backgroundTint="@color/corall"
+                    android:onClick="RegButton"
                     android:text="Зарегистрироваться"
                     tools:layout_editor_absoluteX="32dp"
                     tools:layout_editor_absoluteY="242dp" />
