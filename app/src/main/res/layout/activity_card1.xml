@@ -53,6 +53,7 @@
                     android:text="Урок 1"/>
 
                 <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/FSUlesson1"
                     style="@style/LessonOKButtonStyle"
                     android:onClick="toFSULesson1"/>
             </LinearLayout>

@@ -57,7 +57,6 @@ public class AllCoursesFragment extends Fragment {
     }
     @Override
     public void onViewCreated(View view, Bundle savedInstanceState) {
-        TextView textView = getView().findViewById(R.id.textfsu);
         ToggleButton toggleButton = getView().findViewById(R.id.star_button_fsu);
         SharedPreferences sharedPreferences = getActivity().getSharedPreferences("save", Context.MODE_PRIVATE);
         toggleButton.setChecked(sharedPreferences.getBoolean("value",false));
@@ -66,15 +65,17 @@ public class AllCoursesFragment extends Fragment {
             public void onClick(View v) {
                 if (toggleButton.isChecked()) {
                     SharedPreferences.Editor editor=getActivity().getSharedPreferences("save",Context.MODE_PRIVATE).edit();
-                    editor.putBoolean("value",true);
+                    editor.putBoolean("value", true);
                     editor.apply();
                     toggleButton.setChecked(true);
+                    MainActivity.myBundle.putBoolean("id_User", true);
                 }
                 else {
                     SharedPreferences.Editor editor=getActivity().getSharedPreferences("save",Context.MODE_PRIVATE).edit();
                     editor.putBoolean("value",false);
                     editor.apply();
                     toggleButton.setChecked(false);
+                    MainActivity.myBundle.putBoolean("id_User", false);
                 }
             }
         });
