@@ -54,7 +54,8 @@
 
                 <androidx.appcompat.widget.AppCompatButton
                     android:id="@+id/FSUlesson1"
-                    style="@style/LessonOKButtonStyle"
+                    style="@style/LessonProgressButtonStyle"
+                    android:text="0%"
                     android:onClick="toFSULesson1"/>
             </LinearLayout>
 
@@ -70,7 +71,8 @@
                     android:text="Урок 2" />
 
                 <androidx.appcompat.widget.AppCompatButton
-                    style="@style/LessonOKButtonStyle" />
+                    style="@style/LessonProgressButtonStyle"
+                    android:text="0%"/>
             </LinearLayout>
 
 

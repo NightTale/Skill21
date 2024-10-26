@@ -22,4 +22,7 @@
     <color name="colorTextLesson">#454444</color>
     <color name="colorLessonBut">#D9D9D9</color>
     <color name="colorProfile">#2c2c2c</color>
+
+    <color name="colorTestTrue">#8BE06D</color>
+    <color name="colorTestFalse">#FB739B</color>
 </resources>

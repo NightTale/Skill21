@@ -39,5 +39,4 @@ public class Card1Activity extends AppCompatActivity {
         intent = new Intent(this, FSULesson1.class);
         startActivity(intent);
     }
-
 }
