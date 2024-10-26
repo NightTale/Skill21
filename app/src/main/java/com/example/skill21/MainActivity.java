@@ -22,6 +22,8 @@ import com.example.skill21.databinding.ActivityMainBinding;
 public class MainActivity extends AppCompatActivity {
 
     ActivityMainBinding binding;
+    public static Bundle myBundle = new Bundle();
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
