@@ -33,6 +33,7 @@ public class Card1Activity extends AppCompatActivity {
         Intent intent;
         intent = new Intent(this, HomeActivity.class);
         startActivity(intent);
+        finish();
     }
     public void toFSULesson1(View v) {
         Intent intent;
