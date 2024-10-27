@@ -44,15 +44,18 @@
             android:orientation="vertical">
 
             <TextView
+                android:id="@+id/lesson1test1res"
                 android:layout_width="match_parent"
                 android:text="Задание 1"
                 style="@style/ResultTrueStyle"
                 />
             <TextView
+                android:id="@+id/lesson1test2res"
                 android:layout_width="match_parent"
                 android:text="Задание 2"
                 style="@style/ResultFalseStyle"/>
             <TextView
+                android:id="@+id/lesson1test3res"
                 android:layout_width="match_parent"
                 android:text="Задание 2"
                 style="@style/ResultFalseStyle"/>
