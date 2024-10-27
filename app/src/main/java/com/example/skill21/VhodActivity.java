@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
@@ -19,10 +20,12 @@ import com.example.skill21.utils.PropertiesUtil;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
+import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
 import java.net.Socket;
+import java.nio.charset.StandardCharsets;
 import java.util.Properties;
 
 public class VhodActivity extends AppCompatActivity {
@@ -70,14 +73,29 @@ public class VhodActivity extends AppCompatActivity {
                 int a = reader.read();
                 if (a == 1) {
                     Log.i("InfoLogin", "Вы вошли");
+                    String NAME = reader.readLine();
+                    NAME = "Привет, " + NAME + "!";
+                    String finalNAME = NAME;
+
                     activity.runOnUiThread(new Runnable() {
                         @Override
                         public void run() {
-                            Toast.makeText(activity, "Вы вошли", Toast.LENGTH_LONG).show();
-                            Intent intent;
-                            intent = new Intent(activity, HomeActivity.class);
-                            startActivity(intent);
-                            finish();
+                            try {
+                                FileOutputStream fos = null;
+                                fos = openFileOutput("name.txt",MODE_PRIVATE);
+
+                                fos.write(finalNAME.getBytes(StandardCharsets.UTF_8));
+                                fos.close();
+                                Toast.makeText(activity, "Вы вошли", Toast.LENGTH_LONG).show();
+                                Intent intent;
+                                intent = new Intent(activity, HomeActivity.class);
+                                startActivity(intent);
+                                finish();
+                            }
+                            catch (IOException ex)
+                            {
+                                Log.d("FileOutputError",ex.getMessage());
+                            }
                         }
                     });
                 } else {

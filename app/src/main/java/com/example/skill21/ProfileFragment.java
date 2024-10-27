@@ -4,9 +4,16 @@ import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
 
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.content.Context;
+import android.widget.TextView;
+import android.widget.Toast;
+
+import java.io.FileInputStream;
+import java.io.IOException;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -53,12 +60,28 @@ public class ProfileFragment extends Fragment {
             mParam1 = getArguments().getString(ARG_PARAM1);
             mParam2 = getArguments().getString(ARG_PARAM2);
         }
+        try
+        {
+            FileInputStream fis = null;
+            fis = getActivity().openFileInput("name.txt");
+            byte[] bytes = new byte[fis.available()];
+            fis.read(bytes);
+            String text = new String(bytes);
+            Log.i("TEXT BLIN",text);
+            Toast.makeText(getActivity(),text,Toast.LENGTH_LONG).show();
+            fis.close();
+        }
+        catch (IOException ex)
+        {
+            Log.d("InputFileError",ex.getMessage());
+        }
     }
-
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
+
         return inflater.inflate(R.layout.fragment_profile, container, false);
     }
+
 }
