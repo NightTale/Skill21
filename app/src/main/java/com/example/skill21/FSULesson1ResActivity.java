@@ -64,6 +64,8 @@ public class FSULesson1ResActivity extends AppCompatActivity {
             textRes.setBackgroundResource(result_wrong_background);
         }
 
+        String [] userAnswers = getIntent().getStringArrayExtra("answer3");
+        checkAnswers1(userAnswers);
     }
 
     private static float trust_fsu_lesson_1;
@@ -80,6 +82,7 @@ public class FSULesson1ResActivity extends AppCompatActivity {
 
 
 
+    private void checkAnswers1(String[] userAnswers) {
         int trushniye = 0;
         for (int i = 0; i < correctAnswers.length; i++) {
             if (userAnswers[i] != null && userAnswers[i].equalsIgnoreCase(correctAnswers[i])) {
@@ -87,7 +90,7 @@ public class FSULesson1ResActivity extends AppCompatActivity {
             }
         }
         trust_fsu_lesson_1 = (float) trushniye / correctAnswers.length;
-        Toast.makeText(this, Float.toString(trust_fsu_lesson_1), Toast.LENGTH_LONG).show();
+        Toast.makeText(this, "Правильно " + Integer.toString((int) trushniye) + " из " + Integer.toString(correctAnswers.length) + "!", Toast.LENGTH_LONG).show();
 
     }
     public void toCard1(View v) {

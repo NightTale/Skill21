@@ -5,7 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".FSULesson1">
+    tools:context=".FSULesson2">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -26,7 +26,7 @@
 
             <TextView
                 style="@style/LessonHeaderTextStyle"
-                android:text="Формулы\nсокращенного\nумножения" />
+                android:text="Вторая тема"/>
         </FrameLayout>
 
         <TextView
@@ -68,7 +68,7 @@
                         android:textAlignment="center"
                         android:textColor="@color/white"
                         android:textSize="19sp"
-                        android:onClick="toFSUTest1"/>
+                        android:onClick="toFSUTest2"/>
                 </FrameLayout>
 
                 <TextView
@@ -107,7 +107,7 @@
                             android:textAlignment="center"
                             android:textColor="@color/white"
                             android:textSize="19sp"
-                            android:onClick="toFSUTest1"/>
+                            android:onClick="toFSUTest2"/>
                     </FrameLayout>
                 </RelativeLayout>
             </RelativeLayout>
