@@ -43,6 +43,7 @@ public class FSULesson1Test3 extends AppCompatActivity {
         Intent intent;
         intent = new Intent(this, FSULesson1.class);
         startActivity(intent);
+        finish();
     }
 
     public void toFSULesson1Result(View v) {
@@ -53,8 +54,5 @@ public class FSULesson1Test3 extends AppCompatActivity {
         intent.putExtra("answer3", userAnswer3);
 
         startActivity(intent);
-
     }
-
-
 }

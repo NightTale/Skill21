@@ -43,13 +43,12 @@ public class FSULesson1Test2 extends AppCompatActivity {
         intent.putExtra("answer2", userAnswer2);
 
         intent = new Intent(this, FSULesson1Test3.class);
-
-
         startActivity(intent);
     }
     public void toFSULesson1(View v) {
         Intent intent;
         intent = new Intent(this, FSULesson1.class);
         startActivity(intent);
+        finish();
     }
 }

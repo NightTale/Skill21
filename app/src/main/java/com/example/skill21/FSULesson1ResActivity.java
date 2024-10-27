@@ -1,6 +1,8 @@
 package com.example.skill21;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
@@ -31,7 +33,7 @@ public class FSULesson1ResActivity extends AppCompatActivity {
         checkAnswers(userAnswers);
     }
 
-
+    private static float trust_fsu_lesson_1;
     private void checkAnswers(String[] userAnswers) {
         boolean check = true;
         for (int i = 0; i < correctAnswers.length; i++) {
@@ -40,13 +42,27 @@ public class FSULesson1ResActivity extends AppCompatActivity {
                 break;
             }
         }
+        int trushniye = 0;
+        for (int i = 0; i < correctAnswers.length; i++) {
+            if (userAnswers[i] != null && userAnswers[i].equalsIgnoreCase(correctAnswers[i])) {
+                trushniye++;
+            }
+        }
+        trust_fsu_lesson_1 = (float) trushniye / correctAnswers.length;
         if (check) {
             Toast.makeText(this, "pobeda",Toast.LENGTH_LONG).show();
         }
         else {
             Toast.makeText(this, "pizda",Toast.LENGTH_LONG).show();
-
         }
+        Toast.makeText(this, userAnswer3, Toast.LENGTH_LONG).show();
+
+    }
+    public void toCard1(View v) {
+        Intent intent;
+        intent = new Intent(this, Card1Activity.class);
+        startActivity(intent);
+        finish();
     }
 }
 

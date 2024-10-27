@@ -37,5 +37,6 @@ public class FSULesson1 extends AppCompatActivity {
         Intent intent;
         intent = new Intent(this, Card1Activity.class);
         startActivity(intent);
+        finish();
     }
 }
