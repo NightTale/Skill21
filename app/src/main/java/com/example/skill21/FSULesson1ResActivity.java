@@ -39,7 +39,7 @@ public class FSULesson1ResActivity extends AppCompatActivity {
             }
         }
         trust_fsu_lesson_1 = (float) trushniye / correctAnswers.length;
-        Toast.makeText(this, Float.toString(trust_fsu_lesson_1), Toast.LENGTH_LONG).show();
+        Toast.makeText(this, "Правильно " + Integer.toString((int) trushniye) + " из " + Integer.toString(correctAnswers.length) + "!", Toast.LENGTH_LONG).show();
 
     }
     public void toCard1(View v) {
