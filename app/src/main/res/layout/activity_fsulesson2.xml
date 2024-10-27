@@ -80,7 +80,7 @@
                     android:layout_marginRight="15dp"
                     android:fontFamily="@font/poppins"
                     android:justificationMode="inter_word"
-                    android:text="@string/fsu_lesson1"
+                    android:text="Второй текст"
                     android:textAlignment="center"
                     android:textColor="@color/colorTextLesson"
                     android:textSize="20dp" />

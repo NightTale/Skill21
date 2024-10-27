@@ -31,6 +31,7 @@ public class FSULesson1ResActivity extends AppCompatActivity {
 
         String [] userAnswers = getIntent().getStringArrayExtra("answer3");
         checkAnswers(userAnswers);
+        checkAnswers1(userAnswers);
 
 
         super.onCreate(savedInstanceState);
@@ -63,9 +64,6 @@ public class FSULesson1ResActivity extends AppCompatActivity {
         else {
             textRes.setBackgroundResource(result_wrong_background);
         }
-
-        String [] userAnswers = getIntent().getStringArrayExtra("answer3");
-        checkAnswers1(userAnswers);
     }
 
     private static float trust_fsu_lesson_1;
@@ -79,8 +77,7 @@ public class FSULesson1ResActivity extends AppCompatActivity {
                 checkedAnswers[i] = false;
             }
         }
-
-
+    }
 
     private void checkAnswers1(String[] userAnswers) {
         int trushniye = 0;
