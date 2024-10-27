@@ -1,8 +1,12 @@
 package com.example.skill21;
 
+import static com.example.skill21.R.drawable.result_ok_background;
+import static com.example.skill21.R.drawable.result_wrong_background;
+
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
@@ -13,10 +17,17 @@ import androidx.core.view.WindowInsetsCompat;
 
 public class FSULesson2ResActivity extends AppCompatActivity {
 
-    private final String[] correctAnswers = {"4", "5", "6"};
+    private final String[] correctAnswers = {"-8ab", "2", "4"};
     String userAnswer1, userAnswer2, userAnswer3;
+    boolean [] checkedAnswers = {false,false,false};
+
+    TextView textRes;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        String [] userAnswers = getIntent().getStringArrayExtra("answer3");
+        checkAnswers(userAnswers);
+        checkAnswers2(userAnswers);
+
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_fsulesson2_res);
@@ -26,8 +37,39 @@ public class FSULesson2ResActivity extends AppCompatActivity {
             return insets;
         });
 
-        String [] userAnswers = getIntent().getStringArrayExtra("answer3");
-        checkAnswers2(userAnswers);
+        textRes = (TextView)findViewById(R.id.lesson2test1res);
+        if (checkedAnswers[0] == true){
+            textRes.setBackgroundResource(result_ok_background);
+        }
+        else {
+            textRes.setBackgroundResource(result_wrong_background);
+        }
+        //   textRes.setTextAppearance(R.style.ResultFalseStyle);
+        textRes = (TextView)findViewById(R.id.lesson2test2res);
+        if (checkedAnswers[1] == true){
+            textRes.setBackgroundResource(result_ok_background);
+        }
+        else {
+            textRes.setBackgroundResource(result_wrong_background);
+        }
+        textRes = (TextView)findViewById(R.id.lesson2test3res);
+        if (checkedAnswers[2] == true){
+            textRes.setBackgroundResource(result_ok_background);
+        }
+        else {
+            textRes.setBackgroundResource(result_wrong_background);
+        }
+    }
+    private void checkAnswers(String[] userAnswers) {
+        boolean check = true;
+        for (int i = 0; i < correctAnswers.length; i++) {
+            if (userAnswers[i] != null && userAnswers[i].equalsIgnoreCase(correctAnswers[i])) {
+                checkedAnswers[i] = true;
+            }
+            else{
+                checkedAnswers[i] = false;
+            }
+        }
     }
 
     private void checkAnswers2(String[] userAnswers) {
