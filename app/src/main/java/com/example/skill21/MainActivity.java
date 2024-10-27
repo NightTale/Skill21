@@ -31,7 +31,7 @@ public class MainActivity extends AppCompatActivity {
                 | View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY
         );
         Intent intent;
-        intent = new Intent(this, VhodActivity.class);
+        intent = new Intent(this, HomeActivity.class);
         startActivity(intent);
         finish();
         EdgeToEdge.enable(this);

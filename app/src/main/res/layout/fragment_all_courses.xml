@@ -114,7 +114,7 @@
                             style="@style/TextViewStyle"
                             android:layout_width="170dp"
                             android:layout_height="wrap_content"
-                            android:text="Формулы сокращённого умножения"
+                            android:text="Алгебра"
                             android:textSize="15dp" />
                     </FrameLayout>
 

@@ -72,7 +72,8 @@
 
                 <androidx.appcompat.widget.AppCompatButton
                     style="@style/LessonProgressButtonStyle"
-                    android:text="0%"/>
+                    android:text="0%"
+                    android:onClick="toFSULesson2"/>
             </LinearLayout>
 
 

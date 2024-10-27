@@ -26,22 +26,12 @@ public class FSULesson1ResActivity extends AppCompatActivity {
             return insets;
         });
 
-        userAnswer1 = getIntent().getStringExtra("answer1");
-        userAnswer2 = getIntent().getStringExtra("answer2");
-        userAnswer3 = getIntent().getStringExtra("answer3");
-        String[] userAnswers = {userAnswer1, userAnswer2, userAnswer3};
-        checkAnswers(userAnswers);
+        String [] userAnswers = getIntent().getStringArrayExtra("answer3");
+        checkAnswers1(userAnswers);
     }
 
     private static float trust_fsu_lesson_1;
-    private void checkAnswers(String[] userAnswers) {
-        boolean check = true;
-        for (int i = 0; i < correctAnswers.length; i++) {
-            if (userAnswers[i] != null && !userAnswers[i].equalsIgnoreCase(correctAnswers[i])) {
-                check = false;
-                break;
-            }
-        }
+    private void checkAnswers1(String[] userAnswers) {
         int trushniye = 0;
         for (int i = 0; i < correctAnswers.length; i++) {
             if (userAnswers[i] != null && userAnswers[i].equalsIgnoreCase(correctAnswers[i])) {
@@ -49,13 +39,7 @@ public class FSULesson1ResActivity extends AppCompatActivity {
             }
         }
         trust_fsu_lesson_1 = (float) trushniye / correctAnswers.length;
-        if (check) {
-            Toast.makeText(this, "pobeda",Toast.LENGTH_LONG).show();
-        }
-        else {
-            Toast.makeText(this, "pizda",Toast.LENGTH_LONG).show();
-        }
-        Toast.makeText(this, userAnswer3, Toast.LENGTH_LONG).show();
+        Toast.makeText(this, "Правильно " + Integer.toString((int) trushniye) + " из " + Integer.toString(correctAnswers.length) + "!", Toast.LENGTH_LONG).show();
 
     }
     public void toCard1(View v) {
