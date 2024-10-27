@@ -59,20 +59,13 @@
                 android:backgroundTint="@color/BackGrey"
                 android:orientation="vertical">
 
-                <TextView
+                <ImageView
                     android:id="@+id/textfsu1"
+                    android:src="@drawable/test3"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="15dp"
-                    android:layout_marginTop="40dp"
-                    android:layout_marginBottom="40dp"
-                    android:layout_marginRight="15dp"
-                    android:fontFamily="@font/poppins"
-                    android:justificationMode="inter_word"
-                    android:text="Задачка 3"
-                    android:textAlignment="center"
-                    android:textColor="@color/colorTextLesson"
-                    android:textSize="20dp" />
+                    android:layout_marginRight="15dp" />
             </RelativeLayout>
             <RelativeLayout
                 android:layout_below="@+id/text_lesson"

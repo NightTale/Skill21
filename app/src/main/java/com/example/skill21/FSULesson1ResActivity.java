@@ -19,7 +19,7 @@ import org.w3c.dom.Text;
 
 public class FSULesson1ResActivity extends AppCompatActivity {
 
-    private final String[] correctAnswers = {"4", "5", "6"};
+    private final String[] correctAnswers = {"-8ab", "2", "4"};
     String userAnswer1, userAnswer2, userAnswer3;
     boolean [] checkedAnswers = {false,false,false};
 

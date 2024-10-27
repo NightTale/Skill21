@@ -70,26 +70,38 @@
                         android:textSize="19sp"
                         android:onClick="toFSUTest1"/>
                 </FrameLayout>
+                <RelativeLayout
+                    android:id="@+id/up_lesson"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:id="@+id/textfsu1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginTop="80dp"
+                        android:layout_marginRight="15dp"
+                        android:fontFamily="@font/poppins"
+                        android:justificationMode="inter_word"
+                        android:text="@string/fsu_lesson1"
+                        android:textAlignment="center"
+                        android:textColor="@color/colorTextLesson"
+                        android:textSize="20dp" />
+                    <ImageView
+                        android:layout_below="@+id/textfsu1"
+                        android:layout_margin="10dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/c5fc8a965d3c06665b5d0c7a2cde8e4c"
+                        />
+                </RelativeLayout>
 
-                <TextView
-                    android:id="@+id/textfsu1"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="15dp"
-                    android:layout_marginTop="80dp"
-                    android:layout_marginRight="15dp"
-                    android:fontFamily="@font/poppins"
-                    android:justificationMode="inter_word"
-                    android:text="@string/fsu_lesson1"
-                    android:textAlignment="center"
-                    android:textColor="@color/colorTextLesson"
-                    android:textSize="20dp" />
                 <RelativeLayout
                     android:layout_marginBottom="20dp"
                     android:layout_marginLeft="20dp"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_below="@+id/textfsu1">
+                    android:layout_below="@+id/up_lesson">
                     <FrameLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent">
