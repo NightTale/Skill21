@@ -54,7 +54,7 @@
                 style="@style/ResultFalseStyle"/>
             <TextView
                 android:layout_width="match_parent"
-                android:text="Задание 2"
+                android:text="Задание 3"
                 style="@style/ResultFalseStyle"/>
         </LinearLayout>
     </LinearLayout>
