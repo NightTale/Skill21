@@ -13,6 +13,8 @@ import androidx.core.view.WindowInsetsCompat;
 
 public class FSULesson1Test2 extends AppCompatActivity {
     private EditText answer2;
+    public static String [] userAnswers;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,6 +22,7 @@ public class FSULesson1Test2 extends AppCompatActivity {
                 | View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY
         );
         super.onCreate(savedInstanceState);
+
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_fsulesson1_test2);
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
@@ -36,13 +39,13 @@ public class FSULesson1Test2 extends AppCompatActivity {
     }
     public void toFSULesson1Test3(View v) {
 
+        userAnswers = getIntent().getStringArrayExtra("answer1");
         String userAnswer2 = answer2.getText().toString().trim();
+        userAnswers[1] = userAnswer2;
 
         Intent intent;
-        intent = new Intent(this, FSULesson1ResActivity.class);
-        intent.putExtra("answer2", userAnswer2);
-
         intent = new Intent(this, FSULesson1Test3.class);
+        intent.putExtra("answer2", userAnswers);
         startActivity(intent);
     }
     public void toFSULesson1(View v) {

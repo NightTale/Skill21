@@ -26,10 +26,7 @@ public class FSULesson1ResActivity extends AppCompatActivity {
             return insets;
         });
 
-        userAnswer1 = getIntent().getStringExtra("answer1");
-        userAnswer2 = getIntent().getStringExtra("answer2");
-        userAnswer3 = getIntent().getStringExtra("answer3");
-        String[] userAnswers = {userAnswer1, userAnswer2, userAnswer3};
+        String [] userAnswers = getIntent().getStringArrayExtra("answer3");
         checkAnswers(userAnswers);
     }
 
@@ -49,13 +46,7 @@ public class FSULesson1ResActivity extends AppCompatActivity {
             }
         }
         trust_fsu_lesson_1 = (float) trushniye / correctAnswers.length;
-        if (check) {
-            Toast.makeText(this, "pobeda",Toast.LENGTH_LONG).show();
-        }
-        else {
-            Toast.makeText(this, "pizda",Toast.LENGTH_LONG).show();
-        }
-        Toast.makeText(this, userAnswer3, Toast.LENGTH_LONG).show();
+        Toast.makeText(this, Float.toString(trust_fsu_lesson_1), Toast.LENGTH_LONG).show();
 
     }
     public void toCard1(View v) {

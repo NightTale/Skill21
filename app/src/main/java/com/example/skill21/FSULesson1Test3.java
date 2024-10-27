@@ -15,6 +15,7 @@ import androidx.core.view.WindowInsetsCompat;
 public class FSULesson1Test3 extends AppCompatActivity {
 
     private EditText answer3;
+    public static String [] userAnswers;
     private final String[] correctAnswers = {"4", "5", "6"};
 
     @Override
@@ -47,12 +48,13 @@ public class FSULesson1Test3 extends AppCompatActivity {
     }
 
     public void toFSULesson1Result(View v) {
+        userAnswers = getIntent().getStringArrayExtra("answer2");
         String userAnswer3 = answer3.getText().toString().trim();
+        userAnswers[2] = userAnswer3;
 
         Intent intent;
         intent = new Intent(this, FSULesson1ResActivity.class);
-        intent.putExtra("answer3", userAnswer3);
-
+        intent.putExtra("answer3", userAnswers);
         startActivity(intent);
     }
 }

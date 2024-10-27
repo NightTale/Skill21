@@ -16,7 +16,7 @@ import androidx.core.view.WindowInsetsCompat;
 
 public class FSULesson1Test1 extends AppCompatActivity {
     private EditText answer1;
-
+    public static String[] userAnswers = {"", "", ""};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,6 +25,7 @@ public class FSULesson1Test1 extends AppCompatActivity {
                 | View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY
         );
         EdgeToEdge.enable(this);
+
 
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
@@ -46,12 +47,11 @@ public class FSULesson1Test1 extends AppCompatActivity {
     public void toFSULesson1Test2(View v) {
 
         String userAnswer1 = answer1.getText().toString().trim();
+        userAnswers[0] = userAnswer1;
 
         Intent intent;
-        intent = new Intent(this, FSULesson1ResActivity.class);
-        intent.putExtra("answer1", userAnswer1);
-
         intent = new Intent(this, FSULesson1Test2.class);
+        intent.putExtra("answer1", userAnswers);
         startActivity(intent);
     }
 }
