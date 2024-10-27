@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".FSULesson2Test3">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#FFFFFF"
+        android:orientation="vertical"
+        android:padding="16dp"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="78dp">
+
+        <RelativeLayout
+            android:id="@+id/verh_lesson"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <FrameLayout style="@style/LessonHeaderStyle">
+
+                <ImageButton
+                    style="@style/BackButtonStyle"
+                    android:src="@drawable/strelka"
+                    android:onClick="toFSULesson2"/>
+
+                <TextView
+                    style="@style/LessonHeaderTextStyle"
+                    android:text="Вторая тема" />
+            </FrameLayout>
+
+            <TextView
+                style="@style/ClassNumStyle"
+                android:layout_marginTop="60dp"
+                android:text="Урок 2" />
+
+            <View
+                style="@style/StripStyle"
+                android:layout_marginTop="60dp"
+                />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_below="@+id/verh_lesson"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <RelativeLayout
+                android:id="@+id/text_lesson"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="26dp"
+                android:layout_marginRight="20dp"
+                android:background="@drawable/edit_profile_pic"
+                android:backgroundTint="@color/BackGrey"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/textfsu1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="40dp"
+                    android:layout_marginBottom="40dp"
+                    android:layout_marginRight="15dp"
+                    android:fontFamily="@font/poppins"
+                    android:justificationMode="inter_word"
+                    android:text="Задачка 3"
+                    android:textAlignment="center"
+                    android:textColor="@color/colorTextLesson"
+                    android:textSize="20dp" />
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_below="@+id/text_lesson"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <RelativeLayout
+                    android:layout_above="@+id/strelkaback"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:layout_marginBottom="10dp">
+                    <EditText
+                        android:id="@+id/fsulesson2_question3"
+                        style="@style/TextViewStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:paddingLeft="15dp"
+                        android:background="@drawable/edit_text_border"
+                        android:hint="Введите ответ..."
+                        android:inputType="text"
+                        android:ems="10"
+                        android:textColor="@color/black"
+                        android:textColorHint="#8a8a8a"
+                        />
+
+                </RelativeLayout>
+                <RelativeLayout
+                    android:id="@+id/strelkaback"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true">
+                    <ImageButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/class_back"
+                        android:background="@color/white"
+                        android:layout_gravity="left"
+                        android:onClick="toFSULesson2Test2"/>
+                </RelativeLayout>
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true">
+                    <TextView
+                        style="@style/ClassBottomStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="26dp"
+                        android:text="3/3" />
+                </RelativeLayout>
+                <RelativeLayout
+                    android:id="@+id/strelkaforward"
+                    android:layout_alignParentRight="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true">
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Сдать"
+                        style="@style/ButtonStyle"
+                        android:onClick="toFSULesson2Result"/>
+
+                </RelativeLayout>
+            </RelativeLayout>
+        </RelativeLayout>
+    </RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -40,4 +40,9 @@ public class Card1Activity extends AppCompatActivity {
         intent = new Intent(this, FSULesson1.class);
         startActivity(intent);
     }
+    public void toFSULesson2(View v) {
+        Intent intent;
+        intent = new Intent(this, FSULesson2.class);
+        startActivity(intent);
+    }
 }

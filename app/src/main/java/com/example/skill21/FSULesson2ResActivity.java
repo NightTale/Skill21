@@ -11,7 +11,7 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
-public class FSULesson1ResActivity extends AppCompatActivity {
+public class FSULesson2ResActivity extends AppCompatActivity {
 
     private final String[] correctAnswers = {"4", "5", "6"};
     String userAnswer1, userAnswer2, userAnswer3;
@@ -19,7 +19,7 @@ public class FSULesson1ResActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
-        setContentView(R.layout.activity_fsulesson1_res);
+        setContentView(R.layout.activity_fsulesson2_res);
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
@@ -27,19 +27,17 @@ public class FSULesson1ResActivity extends AppCompatActivity {
         });
 
         String [] userAnswers = getIntent().getStringArrayExtra("answer3");
-        checkAnswers1(userAnswers);
+        checkAnswers2(userAnswers);
     }
 
-    private static float trust_fsu_lesson_1;
-    private void checkAnswers1(String[] userAnswers) {
+    private void checkAnswers2(String[] userAnswers) {
         int trushniye = 0;
         for (int i = 0; i < correctAnswers.length; i++) {
             if (userAnswers[i] != null && userAnswers[i].equalsIgnoreCase(correctAnswers[i])) {
                 trushniye++;
             }
         }
-        trust_fsu_lesson_1 = (float) trushniye / correctAnswers.length;
-        Toast.makeText(this, Float.toString(trust_fsu_lesson_1), Toast.LENGTH_LONG).show();
+        Toast.makeText(this, "Правильно " + Integer.toString((int) trushniye) + " из " + Integer.toString(correctAnswers.length) + "!", Toast.LENGTH_LONG).show();
 
     }
     public void toCard1(View v) {

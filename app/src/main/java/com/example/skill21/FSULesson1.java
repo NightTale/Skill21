@@ -28,7 +28,7 @@ public class FSULesson1 extends AppCompatActivity {
             return insets;
         });
     }
-    public void toFSUTest(View v) {
+    public void toFSUTest1(View v) {
         Intent intent;
         intent = new Intent(this, FSULesson1Test1.class);
         startActivity(intent);
