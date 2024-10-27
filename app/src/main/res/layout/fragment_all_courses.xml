@@ -69,7 +69,7 @@
 
                 <ImageView
                     style="@style/PicInCourseCard"
-                    android:src="@drawable/icon_vk" />
+                    android:src="@drawable/algebra" />
 
                 <FrameLayout
                     android:layout_width="match_parent"
