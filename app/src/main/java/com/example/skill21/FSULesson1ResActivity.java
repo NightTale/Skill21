@@ -13,7 +13,7 @@ import androidx.core.view.WindowInsetsCompat;
 
 public class FSULesson1ResActivity extends AppCompatActivity {
 
-    private final String[] correctAnswers = {"4", "5", "6"};
+    private final String[] correctAnswers = {"-8ab", "2", "4"};
     String userAnswer1, userAnswer2, userAnswer3;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
